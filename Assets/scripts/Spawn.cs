@@ -13,7 +13,7 @@ public class Spawn : MonoBehaviour
         if (other.tag == "bush")
         {
             prefab.SetActive(true);
-            duck_proverka = 1; 
+            duck_proverka = 1;
             
         }
 

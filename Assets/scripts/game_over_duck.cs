@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class game_over_duck : MonoBehaviour
 {
-    public GameObject duck;
-    public int level = 0;
+
 
     void Start()
     {
@@ -18,7 +17,7 @@ public class game_over_duck : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (transform.position.y < -5f)
+        if (transform.position.y < -20f)
         {
             transform.position = new Vector3(PlayerPrefs.GetFloat("xPos_duck"), PlayerPrefs.GetFloat("yPos_duck"), PlayerPrefs.GetFloat("zPos_duck"));
             

@@ -41,7 +41,7 @@ public class SelectPlayerControlSimple : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.G))
 		{
 
-			if (isPlayered == false && ch_controler_robot.isGrounded && Spawn.duck_proverka == 1)
+			if (isPlayered == false && ch_controler_robot.isGrounded && Spawn.duck_proverka == 1 && get_duck.duckkk==0)
 			{
 				Player1_convas.SetActive(false);
 				Player2_convas.SetActive(true);

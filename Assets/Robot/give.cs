@@ -16,6 +16,7 @@ public class give : MonoBehaviour
             duck.SetActive(true);
             duck_robot.SetActive(false);
             get_duck.duckkk -=1 ;
+            
         }
 
     }

@@ -40,7 +40,7 @@ public class SelectPlayerLVL2 : MonoBehaviour
 		if (Input.GetKeyDown(KeyCode.G))
 		{
 
-			if (isPlayered == false && ch_controler_robot.isGrounded)
+			if (isPlayered == false && ch_controler_robot.isGrounded && Spawn.duck_proverka == 1 && get_duck.duckkk == 0)
 			{
 
 				_script1.enabled = false;

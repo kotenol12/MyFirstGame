@@ -20,7 +20,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: {x: 0.05489713, y: 0.29, z: 0.02815479}
+        value: {x: 0.05489713, y: 0.3, z: 0.02815479}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -29,7 +29,7 @@ AnimationClip:
         outWeight: {x: 0.33333334, y: 0.33333334, z: 0.33333334}
       - serializedVersion: 3
         time: 0.33333334
-        value: {x: 0.054897126, y: 0.16, z: 0.02815479}
+        value: {x: 0.054897126, y: 0.12, z: 0.02815479}
         inSlope: {x: 0, y: 0, z: 0}
         outSlope: {x: 0, y: 0, z: 0}
         tangentMode: 0
@@ -42,7 +42,14 @@ AnimationClip:
     path: button.001
   m_ScaleCurves: []
   m_FloatCurves: []
-  m_PPtrCurves: []
+  m_PPtrCurves:
+  - curve:
+    - time: 0
+      value: {fileID: 0}
+    attribute: but
+    path: triger (1)
+    classID: 114
+    script: {fileID: 11500000, guid: 6e3e830447bd9b34b821285d78983433, type: 3}
   m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
@@ -57,7 +64,15 @@ AnimationClip:
       typeID: 4
       customType: 0
       isPPtrCurve: 0
-    pptrCurveMapping: []
+    - serializedVersion: 2
+      path: 2321573314
+      attribute: 2972909258
+      script: {fileID: 11500000, guid: 6e3e830447bd9b34b821285d78983433, type: 3}
+      typeID: 114
+      customType: 0
+      isPPtrCurve: 1
+    pptrCurveMapping:
+    - {fileID: 0}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -112,7 +127,7 @@ AnimationClip:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 0.29
+        value: 0.3
         inSlope: 0
         outSlope: 0
         tangentMode: 136
@@ -121,7 +136,7 @@ AnimationClip:
         outWeight: 0.33333334
       - serializedVersion: 3
         time: 0.33333334
-        value: 0.16
+        value: 0.12
         inSlope: 0
         outSlope: 0
         tangentMode: 136

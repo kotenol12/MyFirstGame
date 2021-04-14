@@ -22,13 +22,15 @@ public class sv : MonoBehaviour
 
         if(player.transform.position.x<-100){
 
-          transform.position = new Vector3(x_koon2, player.transform.position.y + y_koon2, player.transform.position.z + z_koon2);
+          transform.position = new Vector3(player.transform.position.x+ x_koon2, player.transform.position.y + y_koon2, player.transform.position.z + z_koon2);
             transform.rotation = Quaternion.Euler(90.0F,0.0F, 0.0F);
         }
         else{
             transform.position = new Vector3(x_koon, player.transform.position.y + y_koon, player.transform.position.z + z_koon);
-            transform.rotation = Quaternion.Euler(0.0F, 90.0F, 0.0F);
-        }
+            transform.rotation = Quaternion.Euler(0.0F, 90f, 0.0F);
+    
+        }   
 
     }
+
 }

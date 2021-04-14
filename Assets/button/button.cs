@@ -28,6 +28,13 @@ public class button : MonoBehaviour
         }
 
     }
+    private void OnTriggerExit(Collider other)
+    {
+       
+            but.GetComponent<Animator>().SetBool("go", false);
+
+        
+    }
     // Update is called once per frame
     void Update()
     {

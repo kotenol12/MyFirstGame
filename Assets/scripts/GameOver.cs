@@ -19,11 +19,11 @@ public class GameOver : MonoBehaviour
     void FixedUpdate()
     {
 
-        if (transform.position.y < -5f && Spawn.duck_proverka!=1)
+        if (transform.position.y < -20f && Spawn.duck_proverka!=1)
         {       
             transform.position = new Vector3(PlayerPrefs.GetFloat("xPos"), PlayerPrefs.GetFloat("yPos"), PlayerPrefs.GetFloat("zPos"));
         }
-        else if(transform.position.y < -5f && Spawn.duck_proverka == 1)
+        else if(transform.position.y < -20f && Spawn.duck_proverka == 1)
         {
             
             transform.position = new Vector3(PlayerPrefs.GetFloat("xPos"), PlayerPrefs.GetFloat("yPos"), PlayerPrefs.GetFloat("zPos"));
