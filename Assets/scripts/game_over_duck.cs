@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class game_over_duck : MonoBehaviour
 {
-
-
+    public GameObject menu;
+    
     void Start()
     {
       
@@ -20,9 +20,13 @@ public class game_over_duck : MonoBehaviour
         if (transform.position.y < -20f)
         {
             transform.position = new Vector3(PlayerPrefs.GetFloat("xPos_duck"), PlayerPrefs.GetFloat("yPos_duck"), PlayerPrefs.GetFloat("zPos_duck"));
-            
+            HP.hp -= 1;
         }
-
+        
+        if(HP.hp<=0){
+            gameObject.SetActive(false);
+            menu.SetActive(true);
+        }
     }
     private void OnTriggerStay(Collider other)
     {

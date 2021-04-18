@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Key : MonoBehaviour
 {
     public static int Keys = 0;
     public GameObject key_model;
+    public Text hp_bar;
 
     // Start is called before the first frame update
     void Start()
@@ -22,8 +23,8 @@ public class Key : MonoBehaviour
         }
 
     }
-    void Update()
+    void FixedUpdate()
     {
-
+        hp_bar.text = "X " + Keys;
     }
 }

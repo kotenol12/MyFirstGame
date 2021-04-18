@@ -12,8 +12,8 @@ public class SelectPlayerLVL2 : MonoBehaviour
 	private CharacterController ch_controler_frog;
 	public Vector3 OldPosition;
 	private bool isPlayered;
-	public
-
+	public GameObject Player1_convas;
+	public GameObject Player2_convas;
 
 
 
@@ -42,7 +42,8 @@ public class SelectPlayerLVL2 : MonoBehaviour
 
 			if (isPlayered == false && ch_controler_robot.isGrounded && Spawn.duck_proverka == 1 && get_duck.duckkk == 0)
 			{
-
+				Player1_convas.SetActive(false);
+				Player2_convas.SetActive(true);
 				_script1.enabled = false;
 				_script2.enabled = true;
 
@@ -54,7 +55,8 @@ public class SelectPlayerLVL2 : MonoBehaviour
 			else if (ch_controler_frog.isGrounded)
 			{
 
-
+				Player1_convas.SetActive(true);
+				Player2_convas.SetActive(false);
 				_script1.enabled = true;
 				_script2.enabled = false;
 

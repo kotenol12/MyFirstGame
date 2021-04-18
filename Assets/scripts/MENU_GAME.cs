@@ -5,32 +5,41 @@ using UnityEngine.SceneManagement;
 public class MENU_GAME : MonoBehaviour
 {
    public GameObject buuton_menu;
-    public GameObject background;
+    public GameObject slider_pers;
+    public GameObject slider_music;
     public GameObject button_restart;
     public GameObject button_next;
-    public GameObject chet;
+    
     public GameObject Exit;
+    public GameObject volue;
+    public GameObject music;
     public int nextlevel;
     public void Menu(){
         buuton_menu.SetActive(false);
-        background.SetActive(true);
+        slider_pers.SetActive(true);
+        slider_music.SetActive(true);
         button_restart.SetActive(true);
+        volue.SetActive(true);
+        music.SetActive(true);
         button_next.SetActive(true);
-        chet.SetActive(true);
+        
         Exit.SetActive(true);
     }
     public void next(){
+        volue.SetActive(false);
+        music.SetActive(false);
         buuton_menu.SetActive(true);
-        background.SetActive(false);
+        slider_pers.SetActive(false);
+        slider_music.SetActive(false);
         button_restart.SetActive(false);
         button_next.SetActive(false);
-        chet.SetActive(false);
         Exit.SetActive(false);
     }
     public void restar(){
         PlayerPrefs.SetInt("duck", 0);
         PlayerPrefs.SetInt("frog", 0);
         SceneManager.LoadScene(0);
+        Key.Keys = 0;
     }
     public void chets()
     {
@@ -43,7 +52,7 @@ public class MENU_GAME : MonoBehaviour
     }
     public void restart()
     {
-
         SceneManager.LoadScene(nextlevel);
+        Key.Keys = 0;
     }
 }
