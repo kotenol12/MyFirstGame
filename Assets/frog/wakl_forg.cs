@@ -37,9 +37,17 @@ public class wakl_forg : MonoBehaviour
         ch_animator.SetBool("falling", false);
       
         moveVector = Vector3.zero;
-        moveVector.x = Input.GetAxis("Horizontal") * speedMove;
-        moveVector.z = Input.GetAxis("Vertical") * speedMove;
-  if (moveVector.x != 0 || moveVector.z != 0) ch_animator.SetBool("walk", true);
+        if (transform.position.x < -50)
+        {
+            moveVector.x = Input.GetAxis("Horizontal") * speedMove;
+            moveVector.z = Input.GetAxis("Vertical") * speedMove;
+        }
+        else
+        {
+            moveVector.x = Input.GetAxis("Vertical") * speedMove;
+            moveVector.z = Input.GetAxis("Horizontal") * -speedMove;
+        }
+        if (moveVector.x != 0 || moveVector.z != 0) ch_animator.SetBool("walk", true);
         else ch_animator.SetBool("walk", false);
         if (Vector3.Angle(Vector3.forward, moveVector) > 1f || Vector3.Angle(Vector3.forward, moveVector) == 0)
         {

@@ -14,7 +14,7 @@ public class NextLevel : MonoBehaviour {
 			{
 				PlayerPrefs.SetInt("duck", 1);
 				SceneManager.LoadScene(nextlevel);
-				
+				Key.Keys = 0;
 			}
 			
 		}

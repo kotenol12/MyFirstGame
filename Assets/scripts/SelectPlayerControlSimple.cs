@@ -21,6 +21,8 @@ public class SelectPlayerControlSimple : MonoBehaviour
 	void Start()
 	{
 		Vector3 OldPosition = transform.position;
+		get_duck.duckkk = 0;
+		Spawn.duck_proverka = 0;
 	}
 
 

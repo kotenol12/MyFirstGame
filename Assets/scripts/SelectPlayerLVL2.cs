@@ -14,12 +14,14 @@ public class SelectPlayerLVL2 : MonoBehaviour
 	private bool isPlayered;
 	public GameObject Player1_convas;
 	public GameObject Player2_convas;
-
+	
 
 
 	void Start()
 	{
 		Vector3 OldPosition = transform.position;
+		get_duck.duckkk=0;
+		Spawn.duck_proverka = 0;
 	}
 
 

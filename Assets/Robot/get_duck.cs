@@ -17,7 +17,7 @@ public class get_duck : MonoBehaviour
                 duck.SetActive(false);
                 duck_robot.SetActive(true);
                 duck.transform.parent = player.transform;
-                duckkk += 1;
+                duckkk = 1;
             }
         }
     }

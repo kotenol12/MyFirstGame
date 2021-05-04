@@ -9,11 +9,13 @@ public class MENU_GAME : MonoBehaviour
     public GameObject slider_music;
     public GameObject button_restart;
     public GameObject button_next;
-    
+    public GameObject begin;
     public GameObject Exit;
     public GameObject volue;
     public GameObject music;
     public int nextlevel;
+    public GameObject end;
+
     public void Menu(){
         buuton_menu.SetActive(false);
         slider_pers.SetActive(true);
@@ -40,6 +42,8 @@ public class MENU_GAME : MonoBehaviour
         PlayerPrefs.SetInt("frog", 0);
         SceneManager.LoadScene(0);
         Key.Keys = 0;
+        PlayerPrefs.SetInt("proverka", 0);
+        
     }
     public void chets()
     {
@@ -54,5 +58,22 @@ public class MENU_GAME : MonoBehaviour
     {
         SceneManager.LoadScene(nextlevel);
         Key.Keys = 0;
+        
+    }
+    public void delete(){
+        begin.SetActive(false);
+        end.SetActive(false);
+    }
+    private void Start()
+    {
+        if (PlayerPrefs.GetInt("proverka") != 1)
+        {
+            begin.SetActive(true);
+            PlayerPrefs.SetInt("proverka", 1);
+        }
+
+        if (PlayerPrefs.GetInt("duck")==1 && PlayerPrefs.GetInt("frog") == 1){
+            end.SetActive(true);
+        }
     }
 }

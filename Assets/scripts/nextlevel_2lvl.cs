@@ -16,7 +16,9 @@ void OnTriggerEnter(Collider col)
 		{
 				PlayerPrefs.SetInt("frog", 1);
 				SceneManager.LoadScene(nextlevel);
-
+				Spawn.duck_proverka = 0;
+				get_duck.duckkk = 1;
+				Key.Keys = 0;
 		}
 
 	}
